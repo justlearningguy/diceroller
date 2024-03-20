@@ -1,6 +1,12 @@
 const diceBtn = document.getElementById("diceBtn");
 function dice() {
     const diceInput = Number(document.getElementById("diceInput").value);
+    if(isNaN(diceInput)) {
+        document.getElementById("alert").textContent = "Please enter a valid number!";
+        diceContainer.innerHTML = "";
+    }
+    else {
+    document.getElementById("alert").textContent = "";
     const diceContainer = document.getElementById("diceContainer");
     const values = [];
     const images = [];
@@ -29,5 +35,5 @@ function dice() {
         }
     }
     diceContainer.innerHTML = images.join(` `);
-
+}
 }
