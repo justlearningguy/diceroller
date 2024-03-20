@@ -8,11 +8,9 @@ function dice() {
     else {
     document.getElementById("alert").textContent = "";
     const diceContainer = document.getElementById("diceContainer");
-    const values = [];
     const images = [];
     for(let i = 0;i < diceInput;i++) {
         const value = Math.floor(Math.random() * 6)+1;
-        values.push(value);
         switch(value) {
             case 1:
                 images.push("⚀");
